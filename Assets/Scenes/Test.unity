@@ -393,7 +393,8 @@ GameObject:
   - component: {fileID: 521776102}
   - component: {fileID: 521776101}
   - component: {fileID: 521776103}
-  m_Layer: 0
+  - component: {fileID: 521776104}
+  m_Layer: 6
   m_Name: BluePillow
   m_TagString: Collectable
   m_Icon: {fileID: 0}
@@ -461,7 +462,7 @@ Transform:
   m_GameObject: {fileID: 521776100}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 364, y: 171, z: 0}
+  m_LocalPosition: {x: 357, y: 143, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -512,6 +513,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 85.97, y: 78.1}
   m_EdgeRadius: 0
+--- !u!114 &521776104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521776100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38c5ba7498111ab42855d0c4136c6cfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,7 +617,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1444942498}
   - component: {fileID: 1444942497}
-  - component: {fileID: 1444942503}
   - component: {fileID: 1444942499}
   - component: {fileID: 1444942500}
   - component: {fileID: 1444942501}
@@ -697,6 +709,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!50 &1444942500
 Rigidbody2D:
   serializedVersion: 4
@@ -790,18 +805,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1444942503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1444942496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5960a74490785c41b3116c86855a7a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1444942504
 MonoBehaviour:
   m_ObjectHideFlags: 0
