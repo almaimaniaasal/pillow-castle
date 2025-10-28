@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    pickUp.PickItem(transform);
+                    pickUp.PickItem();
                 }
             }
         }
