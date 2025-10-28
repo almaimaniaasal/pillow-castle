@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void PickItem(Transform player)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+       transform.SetParent(player);
+       transform.localPosition = new Vector3(0,54,0);
     }
 }
