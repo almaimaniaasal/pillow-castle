@@ -12,7 +12,11 @@ public class Build : MonoBehaviour
     
     private GameObject player;
     private int itemCount;
-    
+
+    public int ItemCount {  get { return itemCount; } }
+   
+
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
