@@ -803,6 +803,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 306485236910670990, guid: 6d358d105ebaf1946809286cb8e328b0, type: 3}
+      propertyPath: soundManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5799319678421046017, guid: 6d358d105ebaf1946809286cb8e328b0, type: 3}
       propertyPath: m_Name
       value: Player
