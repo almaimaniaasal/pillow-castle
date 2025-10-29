@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Build : MonoBehaviour
 {
@@ -9,7 +11,8 @@ public class Build : MonoBehaviour
     //[SerializeField] private Sprite completedCastle;
     [SerializeField] private float itemsTotal;
     [SerializeField] private GameObject buildShadow;
-    
+    public TextMeshProUGUI scoreText;
+    public GameObject whenpanel;
     private GameObject player;
     private int itemCount;
 
@@ -33,6 +36,8 @@ public class Build : MonoBehaviour
             player.gameObject.GetComponent<PlayerMovement>().IsPicked = false;
             //Increase item count
             itemCount++;
+            scoreText.text = "item:" + itemCount;
+
             //check if item count is 20
             Debug.Log(itemCount);
             
@@ -52,7 +57,8 @@ public class Build : MonoBehaviour
                 Color spriteColor = buildShadow.GetComponent<SpriteRenderer>().color;
                 spriteColor.a = 0;
                 buildShadow.GetComponent<SpriteRenderer>().color = spriteColor;
-                
+
+                whenpanel.SetActive(true);
             }
             
         }
