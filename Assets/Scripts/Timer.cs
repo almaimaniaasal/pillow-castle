@@ -48,4 +48,11 @@ public class Timer : MonoBehaviour
         Time.timeScale = 0f; 
         gameOverPanel.SetActive(true); 
     }
+    public void Restart() 
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+    }
+
 }
