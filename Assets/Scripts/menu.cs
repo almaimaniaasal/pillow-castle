@@ -7,7 +7,7 @@ public class menu : MonoBehaviour
     
     public void Star()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(1);
     }
 
      public void quit()
