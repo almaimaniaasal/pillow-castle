@@ -14,6 +14,13 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     private RaycastHit2D hit;
     private Vector2 lastDirection;
+    private bool isPicked;
+
+    public bool IsPicked
+    {
+        get => isPicked;
+        set => isPicked = value;
+    }
     
     
     // Start is called before the first frame update
@@ -22,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         layerMask = LayerMask.GetMask("Items");
+        isPicked = false;
     }
 
     // Update is called once per frame
@@ -53,12 +61,6 @@ public class PlayerMovement : MonoBehaviour
             anim.SetFloat("LastHorizonatal", moveDirection.x);
             anim.SetFloat("LastVertical", moveDirection.y);
         }
-    }
-
-    private void FixedUpdate()
-    {
-        //Movement
-        rb.MovePosition(rb.position + moveDirection * speed);
         
         Vector2 rayOrigin = (Vector2)transform.position + lastDirection * 50f;
         
@@ -70,11 +72,23 @@ public class PlayerMovement : MonoBehaviour
             PickUp pickUp = hit.collider.gameObject.GetComponent<PickUp>();
             if (pickUp != null)
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyUp(KeyCode.E))
                 {
-                    pickUp.PickItem();
+                    if (!isPicked)
+                    {
+                        pickUp.PickItem();
+                        isPicked = true;
+                    }
                 }
             }
         }
+    }
+
+    private void FixedUpdate()
+    {
+        //Movement
+        rb.MovePosition(rb.position + moveDirection * speed);
+        
+       
     }
 }

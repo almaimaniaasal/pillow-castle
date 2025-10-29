@@ -20,7 +20,7 @@ public class PickUp : MonoBehaviour
 
         if (!pickedUp)
         {
-            if (distance < 80)
+            if (distance < 100)
             {
                 itemIndicator.SetActive(true);
             }
@@ -36,6 +36,7 @@ public class PickUp : MonoBehaviour
        transform.SetParent(player.transform);
        transform.localPosition = new Vector3(0,54,0);
        itemIndicator.SetActive(false);
+       GetComponent<BoxCollider2D>().isTrigger = true;
        pickedUp = true;
     }
     

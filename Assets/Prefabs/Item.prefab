@@ -191,8 +191,8 @@ GameObject:
   - component: {fileID: 4603998107461080009}
   - component: {fileID: 923942466905440919}
   m_Layer: 6
-  m_Name: GameObject
-  m_TagString: Collectable
+  m_Name: Item
+  m_TagString: Item
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -321,7 +321,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 50, y: 50}
+  m_Size: {x: 40, y: 40}
   m_EdgeRadius: 0
 --- !u!1 &7627530503993494950
 GameObject:
