@@ -6,7 +6,9 @@ using UnityEngine;
 public class Build : MonoBehaviour
 {
     [SerializeField] private GameObject particle;
-    [SerializeField] private Sprite completedCastle;
+    //[SerializeField] private Sprite completedCastle;
+    [SerializeField] private float itemsTotal;
+    [SerializeField] private GameObject buildShadow;
     
     private GameObject player;
     private int itemCount;
@@ -40,10 +42,12 @@ public class Build : MonoBehaviour
             //start particle system
             particle.SetActive(true);
             
-            if (itemCount == 20)
+            if (itemCount == itemsTotal)
             {
-                particle.SetActive(false);
-                GetComponent<SpriteRenderer>().sprite = completedCastle;
+                //particle.SetActive(false);
+                Color spriteColor = buildShadow.GetComponent<SpriteRenderer>().color;
+                spriteColor.a = 0;
+                buildShadow.GetComponent<SpriteRenderer>().color = spriteColor;
                 
             }
             

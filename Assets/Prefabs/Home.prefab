@@ -306,7 +306,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 7439516433734789637}
-  completedCastle: {fileID: 21300000, guid: c9e08c01a6087bd4b9c2097d1593bb88, type: 3}
+  itemsTotal: 20
+  buildShadow: {fileID: 4580072353827809655}
 --- !u!58 &1317860951303792705
 CircleCollider2D:
   m_ObjectHideFlags: 0
