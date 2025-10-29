@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private LayerMask layerMask;
+    [SerializeField] private SoundManager soundManager;
     private Rigidbody2D rb;
     private Vector2 moveDirection;
     private Animator anim;
