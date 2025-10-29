@@ -1050,6 +1050,8 @@ PlayableDirector:
     value: {fileID: 1728192963}
   - key: {fileID: 149897447283317996, guid: b66ad210e6481424899dd804d58f8303, type: 2}
     value: {fileID: 950988686}
+  - key: {fileID: 8956574450210292539, guid: b66ad210e6481424899dd804d58f8303, type: 2}
+    value: {fileID: 1728192963}
   m_ExposedReferences:
     m_References:
     - c1584c2da6efeb8468795abde9568f4e: {fileID: 602402643}
@@ -1895,7 +1897,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1459104102
